@@ -12,9 +12,7 @@ const onClickNumber = (event) => {
     return
   }
 
-  if (!numTwo) {
-    $result.value = ''
-  }
+  if (!numTwo) $result.value = ''
   numTwo += event.target.textContent
   $result.value += event.target.textContent
 }
@@ -27,7 +25,6 @@ const onClickOperator = (op) => () => {
     alert('숫자를 먼저 입력하세요.')
   }
 }
-// 고차 함수
 document.querySelector('#num-0').addEventListener('click', onClickNumber)
 document.querySelector('#num-1').addEventListener('click', onClickNumber)
 document.querySelector('#num-2').addEventListener('click', onClickNumber)
@@ -45,30 +42,36 @@ document
 document
   .querySelector('#multiply')
   .addEventListener('click', onClickOperator('*'))
-document
-  .querySelector('#calculator')
-  .addEventListener('click', onClickOperator('='))
-document.querySelector('#clear').addEventListener('click', onClickOperator('C'))
+
 document.querySelector('#plus').addEventListener('click', onClickOperator('+'))
+document.querySelector('#calculator').addEventListener('click', () => {
+  if (numTwo) {
+    switch (operator) {
+      case '+':
+        $result.value = parseInt(numOne) + parseInt(numTwo)
+        break
+      case '-':
+        $result.value = parseInt(numOne) - parseInt(numTwo)
+        break
+      case '*':
+        $result.value = parseInt(numOne) * parseInt(numTwo)
+        break
+      case '/':
+        $result.value = parseInt(numOne) / parseInt(numTwo)
+        break
 
-if (numTwo) {
-  switch (operator) {
-    case '+':
-      $result.value = parseInt(numOne) + parseInt(numTwo)
-      break
-    case '-':
-      $result.value = parseInt(numOne) - parseInt(numTwo)
-      break
-    case '*':
-      $result.value = parseInt(numOne) * parseInt(numTwo)
-      break
-    case '/':
-      $result.value = parseInt(numOne) / parseInt(numTwo)
-      break
-
-    default:
-      break
+      default:
+        break
+    }
+  } else {
+    alert('숫자를 먼저 입력하세요')
   }
-} else {
-  // alert('숫자를 먼저 입력하세요')
-}
+})
+
+document.querySelector('#clear').addEventListener('click', () => {
+  numOne = ''
+  operator = ''
+  numTwo = ''
+  $operator.value = ''
+  $result.value = ''
+})
