@@ -4,6 +4,7 @@ const acquireReading = () => ({
   month: 5,
   year: 2017,
 })
+
 const baseRate = (month, year) => year - 2000 + month
 
 const client1 = () => {
@@ -27,4 +28,4 @@ const client3 = () => {
   return basicChargeAmount
 }
 
-;[client1, client2, client3].forEach(c => console.log(c()))
+export { client1, client2, client3 }
