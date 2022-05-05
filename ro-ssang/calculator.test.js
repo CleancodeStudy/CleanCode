@@ -1,6 +1,8 @@
 import Calculator from './calculator'
+import TypeChecker from './typeChecker'
 
-const calculator = new Calculator()
+const typeChecker = new TypeChecker()
+const calculator = new Calculator(typeChecker)
 
 describe('Calculator', () => {
   describe('add()', () => {
