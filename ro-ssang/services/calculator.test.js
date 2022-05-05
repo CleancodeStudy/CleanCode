@@ -1,5 +1,5 @@
 import Calculator from './calculator'
-import TypeChecker from './typeChecker'
+import TypeChecker from '../utils/typeChecker'
 
 const typeChecker = new TypeChecker()
 const calculator = new Calculator(typeChecker)

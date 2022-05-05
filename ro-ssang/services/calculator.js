@@ -1,5 +1,5 @@
-import ErrorMessage from './constants/ErrorMessage'
-import Type from './constants/Type'
+import ErrorMessage from '../constants/ErrorMessage'
+import Type from '../constants/Type'
 
 export default class Calculator {
   constructor(typeChecker) {
