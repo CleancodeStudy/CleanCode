@@ -6,14 +6,4 @@ const price = order => {
   )
 }
 
-const orderA = {
-  itemPrice: 600,
-  quantity: 3,
-}
-const orderB = {
-  itemPrice: 8000,
-  quantity: 2,
-}
-
-console.log(price(orderA))
-console.log(price(orderB))
+export { price }

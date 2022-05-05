@@ -17,14 +17,4 @@ class Order {
   }
 }
 
-const orderA = new Order({
-  itemPrice: 600,
-  quantity: 3,
-})
-const orderB = new Order({
-  itemPrice: 8000,
-  quantity: 2,
-})
-
-console.log(orderA.price)
-console.log(orderB.price)
+export { Order }
