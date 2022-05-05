@@ -27,4 +27,4 @@ const client3 = () => {
   return basicChargeAmount
 }
 
-;[client1, client2, client3].forEach(c => console.log(c()))
+export { client1, client2, client3 }
