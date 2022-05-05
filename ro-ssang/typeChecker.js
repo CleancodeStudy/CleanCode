@@ -5,7 +5,7 @@ export default class TypeChecker {
 
   checkAllTypes(values, type) {
     for (let i = 0; i < values.length; i++) {
-      if (typeof values[i] !== type) return false
+      if (!this.checkType(values[i], type)) return false
     }
     return true
   }
