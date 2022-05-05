@@ -1,4 +1,4 @@
-export default class Calculate {
+export default class Calculator {
   constructor(typeChecker) {
     this.typeChecker = typeChecker
   }
