@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./index.js" async></script>
+  </head>
+  <body>
+    <div id="calculator" class="calculator">
+      <div id="viewer" class="viewer">0</div>
+      <div class="digits flex">
+        <button type="buttons" class="digit" data-num="9">9</button>
+        <button type="buttons" class="digit" data-num="8">8</button>
+        <button type="buttons" class="digit" data-num="7">7</button>
+        <button type="buttons" class="digit" data-num="6">6</button>
+        <button type="buttons" class="digit" data-num="5">5</button>
+        <button type="buttons" class="digit" data-num="4">4</button>
+        <button type="buttons" class="digit" data-num="3">3</button>
+        <button type="buttons" class="digit" data-num="2">2</button>
+        <button type="buttons" class="digit" data-num="1">1</button>
+        <button type="buttons" class="digit" data-num="0">0</button>
+      </div>
+
+      <div class="modifiers subgrid">
+        <button id="clear" type="button" class="clear modifier">AC</button>
+      </div>
+      <div class="operations subgrid">
+        <button type="button" class="operation" data-ops="divided by">/</button>
+        <button type="button" class="operation" data-ops="times">*</button>
+        <button type="button" class="operation" data-ops="minus">-</button>
+        <button type="button" class="operation" data-ops="plus">+</button>
+        <button type="button" id="equals" class="equals" data-result="">
+          =
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
