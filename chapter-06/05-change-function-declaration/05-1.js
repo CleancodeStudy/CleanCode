@@ -10,7 +10,4 @@ class Book {
   }
 }
 
-const bookcafe = new Book()
-bookcafe.addReservation({ name: 'roy' })
-bookcafe.addReservation({ name: 'jay' })
-console.log(bookcafe.reservation)
+export { Book }
