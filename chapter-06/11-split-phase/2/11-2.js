@@ -1,6 +1,5 @@
-import { readJSON } from '../fileController.js'
+import { readJSON } from './fileController.js'
 
-console.log(process.argv)
 class Order {
   product = {}
   constructor(product) {
@@ -26,4 +25,5 @@ const main = () => {
     console.error(err)
   }
 }
-main()
+
+export { main }
